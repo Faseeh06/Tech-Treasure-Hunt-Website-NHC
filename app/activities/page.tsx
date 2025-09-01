@@ -414,7 +414,7 @@ export default function ActivitiesPage() {
       <footer className="border-t border-border py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <p className="text-muted-foreground text-sm">© 2024 NUST H-12 Tech Treasure Hunt. All rights reserved.</p>
+            <p className="text-muted-foreground text-sm">©2025 NUST H-12 Tech Treasure Hunt. All rights reserved.</p>
           </div>
         </div>
       </footer>

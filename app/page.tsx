@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Trophy, Clock, Building, Target, Lightbulb, Zap, Gamepad2 } from "lucide-react"
 import Link from "next/link"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function TreasureHuntPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-200">
       <header className="py-4 md:py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -13,11 +14,11 @@ export default function TreasureHuntPage() {
               <img src="/hc.png" alt="Logo" className="h-8 md:h-12 w-auto" />
               <h1 className="text-xl md:text-3xl font-bold text-balance">Tech Treasure Hunt</h1>
             </div>
-            <nav className="flex flex-wrap gap-2 md:gap-4 justify-center">
+            <nav className="flex flex-wrap gap-2 md:gap-4 justify-center items-center">
               <Link href="/track-a">
                 <Button
                   size="sm"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
                 >
                   Track A
                 </Button>
@@ -25,7 +26,7 @@ export default function TreasureHuntPage() {
               <Link href="/track-b">
                 <Button
                   size="sm"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
                 >
                   Track B
                 </Button>
@@ -33,7 +34,7 @@ export default function TreasureHuntPage() {
               <Link href="/activities">
                 <Button
                   size="sm"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
                 >
                   Activities
                 </Button>
@@ -41,7 +42,7 @@ export default function TreasureHuntPage() {
               <Link href="/rules">
                 <Button
                   size="sm"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
                 >
                   Rules
                 </Button>
@@ -49,11 +50,12 @@ export default function TreasureHuntPage() {
               <Link href="/venue">
                 <Button
                   size="sm"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
                 >
                   Venue
                 </Button>
               </Link>
+              <ThemeToggle />
             </nav>
           </div>
         </div>
@@ -72,7 +74,7 @@ export default function TreasureHuntPage() {
             <Link href="/track-a" className="w-full md:w-auto">
               <Button
                 size="lg"
-                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
               >
                 <Target className="mr-2 h-4 w-4" />
                 <span className="text-sm md:text-base">Track A: Product Pitch</span>
@@ -81,7 +83,7 @@ export default function TreasureHuntPage() {
             <Link href="/track-b" className="w-full md:w-auto">
               <Button
                 size="lg"
-                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
               >
                 <Gamepad2 className="mr-2 h-4 w-4" />
                 <span className="text-sm md:text-base">Track B: Market Simulation</span>
@@ -163,7 +165,7 @@ export default function TreasureHuntPage() {
                 </p>
                 <Link href="/track-a">
                   <Button
-                    className="w-full border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                    className="w-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
                   >
                     Learn More About Track A
                   </Button>
@@ -186,7 +188,7 @@ export default function TreasureHuntPage() {
                 </p>
                 <Link href="/track-b">
                   <Button
-                    className="w-full border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                    className="w-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
                   >
                     Learn More About Track B
                   </Button>
@@ -246,7 +248,7 @@ export default function TreasureHuntPage() {
           <div className="text-center mt-8">
             <Link href="/rules">
               <Button
-                className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
               >
                 View All Activities & Rules
               </Button>
@@ -267,19 +269,19 @@ export default function TreasureHuntPage() {
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
               >
                 Register Your Team
               </Button>
               <Button
                 size="lg"
-                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
               >
                 Contact Organizers
               </Button>
             </div>
             <div className="mt-8 pt-8 border-t border-border">
-              <p className="text-muted-foreground text-sm">© 2024 NUST H-12 Tech Treasure Hunt. All rights reserved.</p>
+              <p className="text-muted-foreground text-sm">©2025 NUST H-12 Tech Treasure Hunt. All rights reserved.</p>
             </div>
           </div>
         </div>

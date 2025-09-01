@@ -6,45 +6,50 @@ import Link from "next/link"
 export default function TreasureHuntPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="py-6">
+      <header className="py-4 md:py-6">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img src="/hc.png" alt="Logo" className="h-12 w-auto" />
-              <h1 className="text-3xl font-bold text-balance">Tech Treasure Hunt</h1>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
+              <img src="/hc.png" alt="Logo" className="h-8 md:h-12 w-auto" />
+              <h1 className="text-xl md:text-3xl font-bold text-balance">Tech Treasure Hunt</h1>
             </div>
-            <nav className="flex gap-4">
+            <nav className="flex flex-wrap gap-2 md:gap-4 justify-center">
               <Link href="/track-a">
                 <Button
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  size="sm"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
                 >
                   Track A
                 </Button>
               </Link>
               <Link href="/track-b">
                 <Button
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  size="sm"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
                 >
                   Track B
                 </Button>
               </Link>
               <Link href="/activities">
                 <Button
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  size="sm"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
                 >
                   Activities
                 </Button>
               </Link>
               <Link href="/rules">
                 <Button
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  size="sm"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
                 >
                   Rules
                 </Button>
               </Link>
               <Link href="/venue">
                 <Button
-                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  size="sm"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent text-xs md:text-sm"
                 >
                   Venue
                 </Button>
@@ -55,31 +60,31 @@ export default function TreasureHuntPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-6 text-balance">Two Tracks, One Epic Adventure</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-balance">Two Tracks, One Epic Adventure</h2>
+          <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto text-pretty px-4">
             Experience an immersive treasure hunt with two synchronized tracks running in parallel. Teams of five will
             compete in activities that test creativity, problem-solving, collaboration, and adaptability across the NUST
             H-12 campus.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/track-a">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
+            <Link href="/track-a" className="w-full md:w-auto">
               <Button
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
               >
                 <Target className="mr-2 h-4 w-4" />
-                Track A: Product Pitch
+                <span className="text-sm md:text-base">Track A: Product Pitch</span>
               </Button>
             </Link>
-            <Link href="/track-b">
+            <Link href="/track-b" className="w-full md:w-auto">
               <Button
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
               >
                 <Gamepad2 className="mr-2 h-4 w-4" />
-                Track B: Market Simulation
+                <span className="text-sm md:text-base">Track B: Market Simulation</span>
               </Button>
             </Link>
           </div>
@@ -87,10 +92,10 @@ export default function TreasureHuntPage() {
       </section>
 
       {/* Event Details */}
-      <section className="py-16 bg-card">
+      <section className="py-8 md:py-16 bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Event Details</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Event Details</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <Card className="bg-background border-border">
               <CardHeader className="text-center">
                 <Clock className="h-8 w-8 mx-auto mb-2 text-foreground" />
@@ -139,10 +144,10 @@ export default function TreasureHuntPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Choose Your Adventure</h2>
-          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Choose Your Adventure</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <Card className="bg-card border-border hover:bg-muted/20 transition-colors">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
@@ -192,10 +197,10 @@ export default function TreasureHuntPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-card">
+      <section className="py-8 md:py-16 bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Challenge Activities</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Challenge Activities</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
             <Card className="bg-background border-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -251,24 +256,24 @@ export default function TreasureHuntPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12">
+      <footer className="border-t border-border py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready for the Ultimate Tech Adventure?</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold mb-4">Ready for the Ultimate Tech Adventure?</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto px-4">
               Join 100 incoming NUST students in this innovative treasure hunt that combines creativity,
               problem-solving, and strategic thinking across two exciting tracks.
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
               >
                 Register Your Team
               </Button>
               <Button
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="w-full md:w-auto border-2 border-white text-white hover:bg-white hover:text-black bg-transparent"
               >
                 Contact Organizers
               </Button>

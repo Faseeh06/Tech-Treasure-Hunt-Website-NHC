@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const LOCATIONS = [
-  "IAEC lobby",
-  "SEECS lobby",
-  "Concordia 2",
-  "Library",
-  "SEECS basement",
+  "IAEC ground floor lobby",
+  "IAEC first floor start of corridor",
+  "IAEC first floor end of corridor",
+  "RIMMS canopy",
+  "IAEC canopy",
 ] as const
 
 function shuffle<T>(items: readonly T[]): T[] {

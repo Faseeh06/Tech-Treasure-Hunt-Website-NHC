@@ -15,6 +15,14 @@ export default function TreasureHuntPage() {
               <h1 className="text-xl md:text-3xl font-bold text-balance">Tech Treasure Hunt</h1>
             </div>
             <nav className="flex flex-wrap gap-2 md:gap-4 justify-center items-center">
+              <Link href="/track">
+                <Button
+                  size="sm"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent text-xs md:text-sm"
+                >
+                  Map
+                </Button>
+              </Link>
               <Link href="/track-a">
                 <Button
                   size="sm"
@@ -267,18 +275,14 @@ export default function TreasureHuntPage() {
               problem-solving, and strategic thinking across two exciting tracks.
             </p>
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
-              >
-                Register Your Team
-              </Button>
-              <Button
-                size="lg"
-                className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
-              >
-                Contact Organizers
-              </Button>
+              <Link href="https://forms.gle/xhMj22qcj6FF5b6bA" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
+                >
+                  Register Your Team
+                </Button>
+              </Link>
             </div>
             <div className="mt-8 pt-8 border-t border-border">
               <p className="text-muted-foreground text-sm">©2025 NUST H-12 Tech Treasure Hunt. All rights reserved.</p>
